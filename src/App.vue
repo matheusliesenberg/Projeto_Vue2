@@ -37,12 +37,16 @@ function resetar() {
     <hr />
     <p> Exemplo de saudação usando função</p>
     <p> {{ saudacao() }} </p>
-  </div>
+  
   <button @click="resetar">Resetar</button>
   <button @click="acrementar">+</button>
   <button @click="descrementar">-</button>
   
-  <p>valor do contator: {{ contador }}</p>
+  <p :class="contador >=10? 'verde' : 'vermelho'">valor do contador: {{ contador }}</p>
+  <div v-if = "contador >=10" class= "verde"><p>O valor é maior que 10.</p></div>
+  <div v-else = "contator <=10" class="vermelho"><p>O valor menor que 10.</p></div>
+  </div>
+
 </template>
 
 <style scoped>
@@ -65,5 +69,11 @@ button {
   font-weight: bolder;
   border: 0;
   margin: 2px;
+}
+.vermelho{
+  color: red;
+}
+.verde{
+  color: green;
 }
 </style>
