@@ -75,5 +75,5 @@ button {
 }
 .verde{
   color: green;
-}
+} 
 </style> 
